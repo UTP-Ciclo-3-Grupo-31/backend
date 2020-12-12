@@ -1,0 +1,9 @@
+Username: pdprBDvbn6
+
+Database name: pdprBDvbn6
+
+Password: QpxeCRv3E4
+
+Server: remotemysql.com
+
+Port: 3306
