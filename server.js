@@ -15,8 +15,6 @@ app.use((req, res, next) =>{
     next();
 });
 
-
-
 app.use(morgan('dev'));//Morgan es el que se encarga de detectar cambios en la pagina y actualizar el servidor
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

@@ -10,11 +10,14 @@ router.get('/', async(req, res) =>{
 });
 
 //url/api/user/register --- ESTE ESTA SIN USO EN EL FRONT
+/*
 router.post('/register', async(req, res) => { //Para enviar datos
     req.body.password = await bcrypt.hashSync(req.body.password, 12); //Se encripta la contrase;a
     const user = await model.user.create(req.body);
     res.status(200).json(user); //Como respuesta se envía el usuario creado
-});
+});*/
+router.post('/register', userController.register); 
+
 
 //Aqui llamamos al controlador que es el que ejecuta la logica del inicio de sesion
 router.post('/signin', userController.signin); 

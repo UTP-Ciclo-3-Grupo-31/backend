@@ -45,7 +45,9 @@ exports.signin = async (req, res, next) => {
 //Para registrar
 exports.register = async (req, res, next) => {
     try {
-        
+        req.body.password = await bcrypt.hashSync(req.body.password, 12); //Se encripta la contrase;a
+        const user = await model.user.create(req.body);
+        res.status(200).json(user); //Como respuesta se envía el usuario creado
     } catch (error) {
         
     }
