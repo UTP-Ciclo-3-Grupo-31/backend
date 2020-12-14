@@ -12,7 +12,7 @@ exports.signin = async (req, res, next) => {
             if(passwordIsValid){
                 const token = jwt.sign({
                     id: user.id,
-                    name: user.name,
+                    nombre: user.name,
                     email: user.email,
                     rol: user.rol
                 },'config.secret', { //esto apunta a secret/config.js
