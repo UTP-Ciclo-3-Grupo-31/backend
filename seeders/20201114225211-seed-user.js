@@ -5,10 +5,8 @@ module.exports = {
         return queryInterface.bulkInsert('users', [{
             // name: 'David',
             name: 'carlos',
-            // email: 'prueba@test.com',
             email: 'ejemplo@gmail.com',
-            password: '$2y$08$LzenWFgonjBsdkAVj40sJeyVry6Z5Aj7hzu2ykQvy.ZAiBltpYFfi',
-            // password: '$2y$12$io3UR5kGDZl29fekR5Viu.7XZpuPXYug7XwsRd8jYJ.znj1vgupTO', //hola
+            password: '$2y$08$o.SiTuSr26sk9OcwHUt7R.JBiOgN5vrHDU/uVP4XOwG.VNxgp9GBS',
             createdAt: new Date(),
             updatedAt: new Date()
         }]);

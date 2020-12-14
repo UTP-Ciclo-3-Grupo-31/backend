@@ -34,8 +34,7 @@ app.use('/api', apiRouter);
 app.set('PORT', process.env.PORT || 3000);
 
 app.get('/', function(req, res) {
-    console.log("Estructura base del proyecto backend");
-    res.send("Estructura base del proyecto backend");
+    res.send("Que estas buscando aqui?");
 });
 
 app.listen(app.get('PORT'), () => {

@@ -27,11 +27,11 @@ exports.signin = async (req, res, next) => {
                 }); //Se manda el código porque es correcto
             }else{
                 res.status(401).json({
-                    error:'Datos incorrectos'
+                    error:'Contraseña incorrecta'
             })}
         }else{
             res.status(404).json({
-                error:'Datos incorrectos'
+                error:'Datos incorrectos - usuario no encontrado'
             })
         }
     }catch(error){

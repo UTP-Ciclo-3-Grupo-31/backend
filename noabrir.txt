@@ -7,3 +7,15 @@ Password: QpxeCRv3E4
 Server: remotemysql.com
 
 Port: 3306
+
+
+        "username": "pdprBDvbn6",
+        "password": "QpxeCRv3E4",
+        "database": "pdprBDvbn6",
+        "host": "remotemysql.com",
+        "dialect": "mysql"
+
+
+        
+        "dialect": "sqlite",
+        "storage": "./database.sqlite3"
