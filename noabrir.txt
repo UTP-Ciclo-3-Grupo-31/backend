@@ -1,13 +1,17 @@
-Username: pdprBDvbn6
+comandos para correr proyecto
+npm install
+si no esta la base de datos, crear y luego realizar la creacion de la tabla con:
+npx sequelize-cli db:migrate
+poblar la tabla con el usuario de pruebas
+npx sequelize-cli db:seed:all
+correr con:
+nodemon server.js
+o
+npm run dev
 
-Database name: pdprBDvbn6
 
-Password: QpxeCRv3E4
-
-Server: remotemysql.com
-
-Port: 3306
-
+correr el front con
+npm run serve
 
         "username": "pdprBDvbn6",
         "password": "QpxeCRv3E4",
