@@ -13,6 +13,16 @@ npm run dev
 correr el front con
 npm run serve
 
+
+
+
+agregar a heroku
+heroku login
+heroku create
+git push heroku main
+listo
+
+
         "username": "pdprBDvbn6",
         "password": "QpxeCRv3E4",
         "database": "pdprBDvbn6",
