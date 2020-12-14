@@ -1,7 +1,7 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');//para encriptacion
+const jwt = require('jsonwebtoken');//para guardar el token de javascript
 const request  = require('express');
-const models = require('../models');
+const models = require('../models');//para importar los modelos y poder hacer consultas
 
 //Para hacer el login
 exports.signin = async (req, res, next) => {
@@ -15,7 +15,7 @@ exports.signin = async (req, res, next) => {
                     main: user.name,
                     email: user.email,
                     rol: user.rol
-                },'config.secret', { //Puede ser cualquier texto (frase de seguridad)
+                },'config.secret', { //esto apunta a secret/config.js
                     expiresIn: 3600,
                 }
                 );
@@ -24,7 +24,7 @@ exports.signin = async (req, res, next) => {
                     auth: true,
                     accessToken: token,
                     user: user
-                }); //Se manda el código porque es correcto
+                }); 
             }else{
                 res.status(401).json({
                     error:'Contraseña incorrecta'

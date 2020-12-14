@@ -1,13 +1,8 @@
-/*en caso de  hacer uso con el directorio controlador se 
-debe importar como se observa en la siguiente linea, con el nombre del archivo js
-que contiene la logica */
 const express = require ('express');
 const morgan = require('morgan');
 const apiRouter = require('./routes/index'); //Accede por defecto al archivo index.js
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
-//instancia de Express en mi app
 const app = express();
 
 //Instancia de CORS para permitir lectura de recursos remotos
@@ -21,18 +16,15 @@ app.use((req, res, next) =>{
 });
 
 
-//Middleware MORGAN para detectar peticiones
-app.use(morgan('dev'));
+
+app.use(morgan('dev'));//Morgan es el que se encarga de detectar cambios en la pagina y actualizar el servidor
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/api', apiRouter);
-// API ENDPOINTS
-/*se debe contar un una ruta por medio de método post para el inicio de sesión de la siguiente manera:
-'/api/auth/signin'
-*/
+app.use('/api', apiRouter);//aqui van las rutas del login y otros
 app.set('PORT', process.env.PORT || 3000);
 
+//se crea una respuesta al ingresar a la url vacia
 app.get('/', function(req, res) {
     res.send("Que estas buscando aqui?");
 });
