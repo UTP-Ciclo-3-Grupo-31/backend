@@ -1,25 +1,23 @@
 const request = require('supertest')
-const app = require('../server')
+const app = require('../index')
 describe('login Endpoints', () => {
     it('login user', async() => {
         const res = await request(app)
-            .post('/api/auth/signin')
+            .post('/api/usuario/login')
             .send({
-                // email: 'prueba@test.com',
-                email: 'ejemplo@gmail.com',
+                email: 'prueba@gmail.com',
                 password: 'micontraseña',
-                // password: 'hola',
 
             })
         expect(res.statusCode).toEqual(200)
-        expect(res.body).toHaveProperty('accessToken');
+        expect(res.body).toHaveProperty('tokenReturn');
     })
 
     it('can not login user with invalid password', async() => {
         const res = await request(app)
-            .post('/api/auth/signin')
+            .post('/api/usuario/login')
             .send({
-                email: 'ejemplo@gmail.com',
+                email: 'prueba@gmail.com',
                 password: 'micontraseñaa',
 
             })
@@ -28,9 +26,9 @@ describe('login Endpoints', () => {
 
     it('can not login user with invalid username', async() => {
         const res = await request(app)
-            .post('/api/auth/signin')
+            .post('/api/usuario/login')
             .send({
-                email: 'ejempl@gmail.com',
+                email: 'prueb@gmail.com',
                 password: 'micontraseña',
 
             })
