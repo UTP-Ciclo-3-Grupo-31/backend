@@ -17,16 +17,16 @@ module.exports = {
                 allowNull: false,
             },
             descripcion: {
-                type: Sequelize.STRING,
+                type: Sequelize.TEXT,
                 allowNull: false,
             },
             precio_venta: {
                 type: Sequelize.INTEGER,
-                allowNull: false,
+                allowNull: true,
             },
             stock: {
                 type: Sequelize.INTEGER,
-                allowNull: false,
+                allowNull: true,
             },
             estado: {
                 type: Sequelize.INTEGER,
@@ -48,6 +48,18 @@ module.exports = {
             updatedAt: {
                 allowNull: false,
                 type: Sequelize.DATE
+            },
+            urlIcono: {
+                type: Sequelize.STRING,
+                allowNull: true
+            },
+            descripcionCorta: {
+                type: Sequelize.STRING,
+                allowNull: true
+            },
+            urlImagen: {
+                type: Sequelize.STRING,
+                allowNull: true
             }
         });
     },
